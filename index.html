@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive CV using Html & Css</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" 
+    integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js" defer></script>
+    <style>
+        body {
+            scroll-behavior: smooth;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        nav {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .container {
+            margin-top: 60px; /* Adjust this value based on the height of the navbar */
+            display: flex;
+        }
+        .left_Side {
+            width: 30%;
+            padding: 20px;
+            background: #f4f4f4;
+        }
+        .right_Side {
+            width: 70%;
+            padding: 20px;
+        }
+        .profileText .imgBx {
+            text-align: center;
+            width: 200px; /* Zmniejszenie rozmiaru kontenera zdjęcia */
+            height: 200px; /* Zmniejszenie rozmiaru kontenera zdjęcia */
+            border-radius: 50%;
+            overflow: hidden;
+            padding: 10px; /* Dodanie paddingu */
+            background: #003147; /* Dopasowanie koloru tła do sekcji */
+        }
+        .profileText .imgBx img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .title, .title2, .title3, .title4 {
+            margin-bottom: 10px;
+        }
+        .procent {
+            background: #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .procent div {
+            height: 5px;
+            background: #333;
+        }
+        .cookie-consent {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            background: #333;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            display: none;
+            z-index: 1000;
+        }
+        .cookie-consent button {
+            background: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            margin-left: 10px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#language">Language</a></li>
+            <li><a href="#interest">Interest</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="left_Side">
+            <div class="profileText">
+                <div class="imgBx">
+                    <img src="img.jpg" alt="Profile Picture">
+                </div>
+                <h2> Dariusz Różański<br><span>Data Analyst</span></h2>
+            </div>
+            <div class="contactInfo">
+                <h3 class="title">Contact Info</h3>
+                <ul>
+                    <li>
+                        <span class="icon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                        <span class="text">+48 504 733 177</span>
+                    </li>
+                    <li>
+                        <span class="icon"><i class="fa fa-envelope-open" aria-hidden="true"></i></span>
+                        <span class="text">d.roza5959@gmail.com</span>
+                    </li>
+                    <li>
+                        <span class="icon"><i class="fa fa-github" aria-hidden="true"></i></span>
+                        <span class="text">https://github.com/Darek100100</span>
+                    </li>
+                    <li>
+                        <span class="icon"><i class="fa fa-linkedin" aria-hidden="true"></i></span>
+                        <span class="text">https://www.linkedin.com/in/dariusz-różański-574a39225/</span>
+                    </li>
+                    <li>
+                        <span class="icon"><i class="fa fa-map-pin" aria-hidden="true"></i></span>
+                        <span class="text">Warsaw, Masovian, Poland</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="right_Side">
+            <div class="language-switcher">
+                <select id="language-switcher">
+                    <option value="en">English</option>
+                    <option value="pl">Polski</option>
+                </select>
+            </div>
+
+            <div id="profile" class="about">
+                <h2 class="title2">Profile</h2>
+                <p id="profile-text">
+                    I am a technology enthusiast with an education in computer science.<br>
+                    My passion for modern solutions drives me to constantly search for and implement innovative ideas that can improve existing processes.<br>
+                    I possess a deep analytical view of the world, which allows me to effectively evaluate and interpret data from various perspectives.<br>
+                    In my professional work, I focus on data analysis and information processing, using advanced tools and techniques<br>
+                    to transform raw data into valuable insights that support business decision-making.<br>
+                </p>
+            </div>
+
+            <div id="experience" class="about">
+                <h2 class="title2">Experience</h2> 
+                <div class="box">
+                    <div class="year_company">
+                        <h5>2023 - Present</h5>
+                        <h5>Globitell Wholesale</h5>
+                    </div>
+                    <div class="text">
+                        <h4> Data Analyst </h4>
+                        <p id="experience-text">
+                Collecting data from various sources, including databases, reports, and other materials.<br>
+                Processing data and performing statistical analysis to identify patterns and significant correlations.<br>
+                Creating reports, presentations, and charts that showcase the results of data analysis.<br> 
+                Presenting the findings, providing reliable data and analysis. Advising based on the results of data analysis.<br>
+                Monitoring and controlling the quality of data, including identifying errors and ensuring data consistency and completeness.<br>
+                Collaborating with other departments within the company to understand business needs and provide relevant and understandable analyses.<br>
+                Experience in working as an analyst or in a related position.<br>
+                Knowledge of data analysis tools and techniques, such as SQL, Excel, Python, Power BI, etc.<br>
+                Ability to interpret data and draw business conclusions. Excellent analytical and logical thinking skills.<br>
+                Communicative and capable of presenting data effectively.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="skills" class="about skills">
+                <h2 class="title3">Professional Skills</h2>
+                <div class="box">
+                    <h4>Power BI</h4>
+                    <div class="procent">
+                        <div style="width: 95%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>SQL</h4>
+                    <div class="procent">
+                        <div style="width: 75%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>Python</h4>
+                    <div class="procent">
+                        <div style="width: 55%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>Java</h4>
+                    <div class="procent">
+                        <div style="width: 60%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>MS Windows Server</h4>
+                    <div class="procent">
+                        <div style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>Excel</h4>
+                    <div class="procent">
+                        <div style="width: 90%;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="education" class="contactInfo education">
+                <h2 class="title">Education</h2>
+                <ul>
+                    <li> 
+                        <h5>2021 - 2025</h5>
+                        <h4>Master Degree in Computer Science</h4>
+                        <h4>University of Life Science SGGW Warsaw</h4>
+                    </li>
+                    <li> 
+                        <h5>2011 - 2014</h5>
+                        <h4> Information and Data Processing </h4>
+                        <h4>High School</h4>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="language" class="contactInfo language">
+                <h2 class="title">Language</h2>
+                <ul>
+                    <li>
+                        <span class="text">English</span>
+                        <span class="procent">
+                            <div style="width: 75%;"></div>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="text">Dutch</span>
+                        <span class="procent">
+                            <div style="width: 60%;"></div>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="text">Russian</span>
+                        <span class="procent">
+                            <div style="width: 50%;"></div>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+                 
+            <div id="interest" class="about interest">
+                <h2 class="title4">Interest</h2>
+                <ul>
+                    <li><i class="fa fa-gamepad"></i>Gaming</li>
+                    <li><i class="fa fa-book"></i>Reading</li>
+                    <li><i class="fa fa-cutlery"></i>Cooking</li>
+                    <li><i class="fa fa-bicycle"></i>Cycling</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="cookie-consent" id="cookie-consent">
+        This website uses cookies to ensure you get the best experience on our website. 
+        <button id="accept-cookies">Accept</button>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var cookieConsent = document.getElementById("cookie-consent");
+            var acceptCookies = document.getElementById("accept-cookies");
+
+            if (!localStorage.getItem("cookiesAccepted")) {
+                cookieConsent.style.display = "block";
+            }
+
+            acceptCookies.addEventListener("click", function() {
+                localStorage.setItem("cookiesAccepted", "true");
+                cookieConsent.style.display = "none";
+            });
+        });
+    </script>
+</body>
+</html>
